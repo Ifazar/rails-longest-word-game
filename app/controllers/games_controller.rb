@@ -5,7 +5,7 @@ class GamesController < ApplicationController
 
   def score
     response = URI.open("https://wagon-dictionary.herokuapp.com/#{word}")
-    JSON.parse(response)
-
+    note = JSON.parse(response)
+    @note = note
   end
 end
